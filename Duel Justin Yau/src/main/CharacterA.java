@@ -2,10 +2,15 @@ package main;
 
 public class CharacterA implements Dueler {
 	
+	private int hp;
+	
+	public CharacterA() {
+	
+	}
+	
 	public void taunt() {
-		String theTaunt ;
 		
-		System.out.println("");
+		System.out.println("You will never shoot me!");
 	}
 	
 	public String getName() {
@@ -13,11 +18,11 @@ public class CharacterA implements Dueler {
 	}
 	
 	public void setStartingHP(int hp) {
-		
+		this.hp = hp;
 	}
 	
 	public int getHP() {
-		return 0;
+		return hp;
 	}
 	
 	public boolean determineIfOpponentIsFair(Dueler d, int hp)
