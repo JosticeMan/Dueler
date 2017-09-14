@@ -2,6 +2,8 @@ package main;
 
 public class CharacterA implements Dueler {
 	
+	private String[] taunts = {"Come and shoot me!", ""};
+	
 	public void taunt() {
 		System.out.println("");
 	}
@@ -17,4 +19,10 @@ public class CharacterA implements Dueler {
 	public int getHP() {
 		return 0;
 	}
+	
+	public boolean determineIfOpponentIsFair(Dueler d, int hp)
+	{
+		return true;
+	}
+	
 }

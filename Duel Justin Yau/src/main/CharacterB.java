@@ -18,4 +18,10 @@ public class CharacterB implements Dueler {
 		return 0;
 	}
 	
+	public boolean determineIfOpponentIsFair(Dueler d, int hp)
+	{
+		return true;
+	}
+	
+	
 }
