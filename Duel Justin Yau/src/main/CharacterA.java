@@ -2,9 +2,9 @@ package main;
 
 public class CharacterA implements Dueler {
 	
-	private String[] taunts = {"Come and shoot me!", ""};
-	
 	public void taunt() {
+		String theTaunt ;
+		
 		System.out.println("");
 	}
 	
