@@ -24,7 +24,28 @@ public class Duel {
 		
 	}
 	
+	public class CharacterA implements Dueler {
+		
+		public void taunt() {
+			
+		}
+		
+		public String getName() {
+			return "Hello";
+		}
+		
+	}
+	
+	public class CharacterB implements Dueler {
+		
+		public void taunt() {
+			
+		}
+		
+		public String getName() {
+			return "Hello";
+		}
+		
+	}
 
 }
-
-
