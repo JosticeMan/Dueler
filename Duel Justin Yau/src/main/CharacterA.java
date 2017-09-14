@@ -2,7 +2,7 @@ package main;
 
 public class CharacterA implements Dueler {
 	
-	private int hp;
+	private int hp = -1;
 	
 	public CharacterA() {
 	
@@ -14,11 +14,16 @@ public class CharacterA implements Dueler {
 	}
 	
 	public String getName() {
+		
 		return "Justin";
 	}
 	
 	public void setStartingHP(int hp) {
-		this.hp = hp;
+		
+		if(this.hp == -1) {
+			this.hp = hp;
+		}
+		
 	}
 	
 	public int getHP() {
