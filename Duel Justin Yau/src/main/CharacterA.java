@@ -4,14 +4,20 @@ public class CharacterA implements Dueler {
 	
 	private int hp = 0;
 	private boolean loaded = false;
+	private String[] theTaunts = {"You will never get to shoot me!", "I am sad to say that you will lose!", "You'll never get my cookies!", "I'm too good for you.", "You should've never challenged me!"};
+	private int previousTaunt = -1;
 	
 	public CharacterA() {
 	
 	}
 	
 	public void taunt() {
-		
-		System.out.println(this.getName() + ": You will never shoot me!");
+		int random = (int) (Math.random() * 5);
+		while(random == previousTaunt)
+		{
+			random = (int) (Math.random() * 5);
+		}
+		System.out.println(this.getName() + ": " + theTaunts[random]);
 	}
 	
 	public String getName() {
