@@ -3,6 +3,7 @@ package main;
 public class CharacterA implements Dueler {
 	
 	private int hp = 0;
+	private boolean loaded = false;
 	
 	public CharacterA() {
 	
@@ -10,7 +11,7 @@ public class CharacterA implements Dueler {
 	
 	public void taunt() {
 		
-		System.out.println("You will never shoot me!");
+		System.out.println(this.getName() + ": You will never shoot me!");
 	}
 	
 	public String getName() {
@@ -41,8 +42,25 @@ public class CharacterA implements Dueler {
 		}
 		else
 		{
-			int random = (int) (Math.random() * 3);
-			return random;
+			if(loaded) {
+				int random = (int) (Math.random() * 2 + 1);
+				if(random == 1) {
+					loaded = false;
+				}
+				return random;
+			}
+			else
+			{
+				int random = (int) (Math.random() * 2);
+				//This prevents the AI from shooting an unloaded gun which means it has more intelligence. 
+				if(random == 1) {
+					random = 2;
+				}
+				if(random == 0) {
+					loaded = true;
+				}
+				return random;
+			}
 		}
 		
 	}
