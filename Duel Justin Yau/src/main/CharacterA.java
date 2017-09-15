@@ -43,6 +43,7 @@ public class CharacterA implements Dueler {
 		else
 		{
 			if(loaded) {
+				//The AI will have to decide between shooting or not shooting.
 				int random = (int) (Math.random() * 2 + 1);
 				if(random == 1) {
 					loaded = false;
@@ -51,6 +52,7 @@ public class CharacterA implements Dueler {
 			}
 			else
 			{
+				//The AI will pick a number consisting of 0 or 1. 1 will represent guarding in this case.
 				int random = (int) (Math.random() * 2);
 				//This prevents the AI from shooting an unloaded gun which means it has more intelligence. 
 				if(random == 1) {
