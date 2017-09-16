@@ -17,6 +17,7 @@ public class CharacterA implements Dueler {
 		{
 			random = (int) (Math.random() * 5);
 		}
+		previousTaunt = random;
 		System.out.println(this.getName() + ": " + theTaunts[random]);
 	}
 	
