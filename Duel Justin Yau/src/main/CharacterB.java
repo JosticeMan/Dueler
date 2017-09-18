@@ -50,6 +50,22 @@ public class CharacterB implements Dueler {
 		}
 		else {
 			int randomNum = (int) Math.random()*3;
+			if(randomNum == 0 && isLoaded) {
+				isLoaded = false;
+				return randomNum;
+			}
+			else {
+				randomNum = (int) Math.random()*2+1;
+				if(randomNum == 1) {
+					isLoaded = false;
+					return randomNum;
+				}
+				if(randomNum == 2) {
+					return randomNum;
+				}
+			}
+			
+			
 			while(randomNum == 0) {
 				if(isLoaded) {
 					randomNum = (int) Math.random()*3;
