@@ -57,16 +57,13 @@ public class CharacterB implements Dueler {
 				else {
 					if(randomNum == 1) {
 						isLoaded = false;
-						return randomNum;
-					}
-					else {
-						randomNum = 2;
-						return randomNum;
+						return 1;
 					}
 				}
 			}
 			
 		}
+		return 2;
 			
 	}
 	public void hit(Object caller) {
@@ -74,6 +71,4 @@ public class CharacterB implements Dueler {
 			hp = hp - 10;
 		}
 	}
-	}
-	
 }
