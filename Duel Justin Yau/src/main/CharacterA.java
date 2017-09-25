@@ -12,10 +12,10 @@ public class CharacterA implements Dueler {
 	}
 	
 	public void taunt() {
-		int random = (int) (Math.random() * 5);
+		int random = (int) (Math.random() * theTaunts.length);
 		while(random == previousTaunt)
 		{
-			random = (int) (Math.random() * 5);
+			random = (int) (Math.random() * theTaunts.length);
 		}
 		previousTaunt = random;
 		System.out.println(this.getName() + ": " + theTaunts[random]);
